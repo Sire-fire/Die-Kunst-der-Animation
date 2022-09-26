@@ -8,21 +8,50 @@ body {
     margin: 0;
 }
 
-h1 {
+h1 {}
 
+p {}
+
+header nav {
+    background-color: rgb(67, 53, 35);
+    color: white;
+    width: 100%;
 }
 
-p {
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+}
 
+header nav li {
+    padding: 16px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.ist-aktive-seite {
+    background-color: rgb(129, 97, 54);
 }
 
 .bild-links {
 
-    float:left;
+    float: left;
 
     margin-right: 16px;
-    margin-bottom :16px;
+    margin-bottom: 16px;
 }
-li img{
-    display:block ;
+
+li img {
+    display: block;
 }
