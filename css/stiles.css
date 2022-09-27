@@ -78,6 +78,7 @@ main {
 
 .flex {
     display: flex;
+    align-items: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -98,7 +99,7 @@ main {
 li img {
     display: block;
 }
-
+img{max-width:100%}
 @media (max-width: 767px) {
     img {
         width: 100%;
