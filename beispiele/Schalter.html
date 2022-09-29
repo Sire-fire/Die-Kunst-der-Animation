@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo für Colin</title>
+     <style>
+      .hoverbox {
+        background-color: orange;
+        background-image: url(https://www.koeln.de/files/images/imago0084907525h.horizontal.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-left: 0;
+        transition: margin-left 2s;
+      }
+
+      .hoverzeile {
+        border: 2px dotted gray;
+      }
+
+      .hoverzeile:hover {
+        cursor: pointer;
+      }
+
+      .hoverzeile:hover .hoverbox {
+        margin-left: calc(100% - 80px);
+      }
+    </style>
+    <style>
+      .box {
+        background-color: orange;
+        background-image: url(https://www.koeln.de/files/images/imago0084907525h.horizontal.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-left: 0;
+        transition: margin-left 2s;
+      }
+
+      .zeile {
+        border: 2px dotted gray;
+        cursor: pointer;
+        border-radius: 40px;
+      }
+
+      .eingeschaltet {
+        border-color: red;
+      }
+
+      .zeile.eingeschaltet .box {
+        margin-left: calc(100% - 80px);
+      }
+      .abstand-oben {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hoverzeile">
+        <div class="hoverbox"></div>
+      </div>
+    <div class="zeile abstand-oben">
+      <div class="box"></div>
+    </div>
+    <script>
+      var zeilenElement = document.querySelector(".zeile");
+      var istEingeschaltet = false;
+
+      function schalteEinAus() {
+        zeilenElement.classList.toggle("eingeschaltet");
+        // if (istEingeschaltet) {
+        //   istEingeschaltet = false;
+        //   zeilenElement.classList.remove("eingeschaltet");
+        // } else {
+        //   istEingeschaltet = true;
+        //   zeilenElement.classList.add("eingeschaltet");
+        // }
+      }
+
+      zeilenElement.addEventListener("click", schalteEinAus);
+      //   zeilenElement.addEventListener("mouseenter", schalteEinAus);
+      //   zeilenElement.addEventListener("mouseleave", schalteEinAus);
+    </script>
+  </body>
+</html>

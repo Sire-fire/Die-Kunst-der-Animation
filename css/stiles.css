@@ -66,6 +66,13 @@ main {
     padding: 16px;
 }
 
+footer {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 8px;
+    border-top: 2px solid black;
+}
+
 .ist-aktive-seite {
     background-color: rgb(129, 97, 54);
 }
@@ -78,6 +85,7 @@ main {
 
 .flex {
     display: flex;
+    align-items: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -98,7 +106,7 @@ main {
 li img {
     display: block;
 }
-
+img{max-width:100%}
 @media (max-width: 767px) {
     img {
         width: 100%;
